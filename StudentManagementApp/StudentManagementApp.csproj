@@ -217,14 +217,69 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\vendor\datatables\chart-area-demo.js" />
+    <Content Include="Content\vendor\datatables\chart-bar-demo.js" />
+    <Content Include="Content\vendor\datatables\chart-pie-demo.js" />
+    <Content Include="Content\vendor\datatables\datatables-demo.js" />
+    <Content Include="Content\vendor\fontawesome-free\css\all.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Content\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Content\vendor\fontawesome-free\js\all.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\all.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\brands.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\brands.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\fontawesome.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\fontawesome.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\regular.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\regular.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\solid.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\solid.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\v4-shims.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\v4-shims.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\LICENSE.txt" />
+    <Content Include="Content\style\sb-admin.css" />
+    <Content Include="Content\style\sb-admin.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.js" />
+    <Content Include="Content\vendor\chart.js\Chart.min.js" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\vendor\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Content\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Content\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.js" />
+    <Content Include="Content\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Models\StudentManagementDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StudentManagementDB.edmx</DependentUpon>
@@ -235,8 +290,6 @@
       <DependentUpon>StudentManagementDB.edmx</DependentUpon>
       <LastGenOutput>StudentManagementDB.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -247,6 +300,38 @@
     <Content Include="Models\StudentManagementDB.edmx.diagram">
       <DependentUpon>StudentManagementDB.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\vendor\fontawesome-free\package.json" />
+    <Content Include="Content\vendor\fontawesome-free\README.md" />
+    <Content Include="Content\vendor\fontawesome-free\scss\brands.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\fontawesome.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\regular.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\solid.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\v4-shims.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_animated.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_bordered-pulled.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_core.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_fixed-width.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_icons.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_larger.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_list.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_mixins.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_rotated-flipped.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_screen-reader.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_shims.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_stacked.scss" />
+    <Content Include="Content\vendor\fontawesome-free\scss\_variables.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -258,6 +343,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sb-admin.js" />
+    <Content Include="Scripts\sb-admin.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -310,16 +397,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\vendor\fontawesome-free\svgs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />

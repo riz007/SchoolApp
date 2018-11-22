@@ -1,0 +1,22 @@
+[
+  {
+    "outputFile": "Content/style/_cards.css",
+    "inputFile": "Content/scss/_cards.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Content/style/_navbar.css",
+    "inputFile": "Content/scss/_navbar.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Content/scss/_global.css",
+    "inputFile": "Content/scss/_global.scss",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Content/scss/_footer.css",
+    "inputFile": "Content/scss/_footer.scss",
+    "sourceMap": false
+  }
+]
