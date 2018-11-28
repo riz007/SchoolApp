@@ -23,6 +23,13 @@ namespace StudentManagementApp.Models
         public int phone { get; set; }
         public System.DateTime dateOfJoin { get; set; }
         public int addressID { get; set; }
+        public string street { get; set; }
+        public string city { get; set; }
+        public string line1 { get; set; }
+        public string line2 { get; set; }
+        public string province { get; set; }
+        public string zipCode { get; set; }
+        public string country { get; set; }
     
         public virtual Address Address { get; set; }
     }

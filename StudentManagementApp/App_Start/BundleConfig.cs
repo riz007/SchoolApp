@@ -14,6 +14,9 @@ namespace StudentManagementApp
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+            "~/Scripts/jquery-ui.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryeasing").Include(
                        "~/Content/vendor/jquery-easing/jquery.easing.min.js"));
 
@@ -43,10 +46,16 @@ namespace StudentManagementApp
             bundles.Add(new ScriptBundle("~/bundles/datatables-bootstrap4").Include(
                 "~/Content/vendor/datatables/dataTables.bootstrap4.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/momentjs").Include(
+                "~/Scripts/moment.min.js"));
+
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/vendor/bootstrap/css/bootstrap.min.css",
                       "~/Content/vendor/datatables/dataTables.bootstrap4.css",
                       "~/Content/vendor/fontawesome-free/css/all.min.css",
+                      "~/Content/vendor/jquery/jquery-ui.min.css",
+                      "~/Content/vendor/jquery/jquery-ui.theme.min.css",
                       "~/Content/style/sb-admin.css"));
         }
     }
