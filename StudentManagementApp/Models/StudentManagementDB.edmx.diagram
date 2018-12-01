@@ -4,21 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="25f51e5e2f9c4307b30bdc4fd0278e1d" Name="Diagram1">
-        <EntityTypeShape EntityType="dbstudentModel.Address" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+      <Diagram DiagramId="b15bc9985c6a41d598648dd561830eb8" Name="Diagram1">
+        <EntityTypeShape EntityType="dbstudentModel.Address" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="dbstudentModel.Admin" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Attendance" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Course" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Enroll" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Exam" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Attendance" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Course" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Enroll" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Exam" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
         <EntityTypeShape EntityType="dbstudentModel.ExamResult" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Faculty" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Section" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Faculty" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Section" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
         <EntityTypeShape EntityType="dbstudentModel.Student" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbstudentModel.Teacher" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbstudentModel.Teacher" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
         <AssociationConnector Association="dbstudentModel.FK__Admin__addressID__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="dbstudentModel.FK__Student__address__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="dbstudentModel.FK__Student__address__4F7CD00D" ManuallyRouted="false" />
         <AssociationConnector Association="dbstudentModel.FK__Teacher__address__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="dbstudentModel.FK__Attendanc__stude__5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="dbstudentModel.FK__Course__facultyI__300424B4" ManuallyRouted="false" />
         <AssociationConnector Association="dbstudentModel.FK__Exam__courseID__38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="dbstudentModel.FK__Section__courseI__32E0915F" ManuallyRouted="false" />

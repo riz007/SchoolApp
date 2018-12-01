@@ -1,0 +1,67 @@
+﻿@model StudentManagementApp.Models.Exam
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.examType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examFullScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examFullScore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examScorePercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examScorePercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.courseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.courseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Section.sectionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section.sectionID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.examID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StudentManagementApp.Models.Attendance>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Attendance Records</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.studentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.attenDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.studentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.attenDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.attendanceID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.attendanceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.attendanceID })
+        </td>
+    </tr>
+}
+
+</table>

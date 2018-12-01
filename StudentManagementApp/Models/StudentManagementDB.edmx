@@ -39,6 +39,7 @@
           </Key>
           <Property Name="attendanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="attenDate" Type="date" Nullable="false" />
+          <Property Name="studentID" Type="int" />
         </EntityType>
         <EntityType Name="Course">
           <Key>
@@ -137,6 +138,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Attendanc__stude__5165187F">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="studentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Course__facultyI__300424B4">
           <End Role="Faculty" Type="Self.Faculty" Multiplicity="1" />
           <End Role="Course" Type="Self.Course" Multiplicity="*" />
@@ -197,7 +210,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__address__25869641">
+        <Association Name="FK__Student__address__4F7CD00D">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,6 +250,10 @@
             <End Role="Address" EntitySet="Address" />
             <End Role="Admin" EntitySet="Admin" />
           </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__stude__5165187F" Association="Self.FK__Attendanc__stude__5165187F">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="Attendance" EntitySet="Attendance" />
+          </AssociationSet>
           <AssociationSet Name="FK__Course__facultyI__300424B4" Association="Self.FK__Course__facultyI__300424B4">
             <End Role="Faculty" EntitySet="Faculty" />
             <End Role="Course" EntitySet="Course" />
@@ -257,7 +274,7 @@
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Section" EntitySet="Section" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__address__25869641" Association="Self.FK__Student__address__25869641">
+          <AssociationSet Name="FK__Student__address__4F7CD00D" Association="Self.FK__Student__address__4F7CD00D">
             <End Role="Address" EntitySet="Address" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -284,7 +301,7 @@
           <Property Name="zipCode" Type="Int32" Nullable="false" />
           <Property Name="country" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Admins" Relationship="Self.FK__Admin__addressID__286302EC" FromRole="Address" ToRole="Admin" />
-          <NavigationProperty Name="Students" Relationship="Self.FK__Student__address__25869641" FromRole="Address" ToRole="Student" />
+          <NavigationProperty Name="Students" Relationship="Self.FK__Student__address__4F7CD00D" FromRole="Address" ToRole="Student" />
           <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__address__2B3F6F97" FromRole="Address" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Admin">
@@ -309,6 +326,8 @@
           </Key>
           <Property Name="attendanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="attenDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="studentID" Type="Int32" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Attendanc__stude__5165187F" FromRole="Attendance" ToRole="Student" />
         </EntityType>
         <EntityType Name="Course">
           <Key>
@@ -389,7 +408,8 @@
           <Property Name="phone" Type="Int32" Nullable="false" />
           <Property Name="dateOfJoin" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="addressID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Address" Relationship="Self.FK__Student__address__25869641" FromRole="Student" ToRole="Address" />
+          <NavigationProperty Name="Address" Relationship="Self.FK__Student__address__4F7CD00D" FromRole="Student" ToRole="Address" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__stude__5165187F" FromRole="Student" ToRole="Attendance" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -419,7 +439,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__address__25869641">
+        <Association Name="FK__Student__address__4F7CD00D">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -440,6 +460,18 @@
             </Principal>
             <Dependent Role="Teacher">
               <PropertyRef Name="addressID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Attendanc__stude__5165187F">
+          <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="Attendance">
+              <PropertyRef Name="studentID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -519,13 +551,17 @@
             <End Role="Address" EntitySet="Addresses" />
             <End Role="Admin" EntitySet="Admins" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__address__25869641" Association="Self.FK__Student__address__25869641">
+          <AssociationSet Name="FK__Student__address__4F7CD00D" Association="Self.FK__Student__address__4F7CD00D">
             <End Role="Address" EntitySet="Addresses" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
           <AssociationSet Name="FK__Teacher__address__2B3F6F97" Association="Self.FK__Teacher__address__2B3F6F97">
             <End Role="Address" EntitySet="Addresses" />
             <End Role="Teacher" EntitySet="Teachers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Attendanc__stude__5165187F" Association="Self.FK__Attendanc__stude__5165187F">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="Attendance" EntitySet="Attendances" />
           </AssociationSet>
           <AssociationSet Name="FK__Course__facultyI__300424B4" Association="Self.FK__Course__facultyI__300424B4">
             <End Role="Faculty" EntitySet="Faculties" />
@@ -589,6 +625,7 @@
               <MappingFragment StoreEntitySet="Attendance">
                 <ScalarProperty Name="attendanceID" ColumnName="attendanceID" />
                 <ScalarProperty Name="attenDate" ColumnName="attenDate" />
+                <ScalarProperty Name="studentID" ColumnName="studentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

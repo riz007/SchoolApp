@@ -24,6 +24,8 @@ body {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 80px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 body.fixed-nav #content-wrapper {
@@ -376,4 +378,8 @@ body.sidebar-toggled footer.sticky-footer {
 
 .nav-link a {
     color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.topbar-txt {
+    color: #fff;
 }

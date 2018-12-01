@@ -39,7 +39,7 @@ namespace StudentManagementApp.Controllers
         // GET: Teachers/Create
         public ActionResult Create()
         {
-            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "street");
+            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "city");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace StudentManagementApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "street", teacher.addressID);
+            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "city", teacher.addressID);
             return View(teacher);
         }
 
@@ -73,7 +73,7 @@ namespace StudentManagementApp.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "street", teacher.addressID);
+            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "city", teacher.addressID);
             return View(teacher);
         }
 
@@ -90,7 +90,7 @@ namespace StudentManagementApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "street", teacher.addressID);
+            ViewBag.addressID = new SelectList(db.Addresses, "addressID", "city", teacher.addressID);
             return View(teacher);
         }
 

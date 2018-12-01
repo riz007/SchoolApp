@@ -2,130 +2,77 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
-<div class="container-fluid">
-    <!-- Breadcrumbs-->
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item active">Students</li>
-    </ol>
-    <h2>Index</h2>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <div class="card mb-3">
-        <div class="card-header">
-            <i class="fas fa-table"></i>
-            Students Info
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.firstName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.lastName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.email)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.password)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.dateOfBirth)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.phone)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.dateOfJoin)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Address.street)
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.firstName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.lastName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.email)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.password)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.dateOfBirth)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.phone)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.dateOfJoin)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Address.street)
-                            </th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.firstName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.lastName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.email)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.password)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.dateOfBirth)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.phone)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.dateOfJoin)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Address.street)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.studentID }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.studentID }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.studentID })
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<h2>Student Info</h2>
 
-</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.firstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfJoin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address.street)
+        </th>
+        <th></th>
+    </tr>
 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateOfJoin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address.street)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.studentID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.studentID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.studentID })
+            </td>
+        </tr>
+    }
 
-
+</table>
 

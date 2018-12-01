@@ -1,0 +1,35 @@
+﻿@model StudentManagementApp.Models.Section
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Section</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.courseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.courseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teacher.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teacher.firstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sectionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

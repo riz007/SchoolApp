@@ -30,7 +30,7 @@ namespace StudentManagementApp.Controllers
                 if(user.IsValid(user.userName, user.password))
                 {
                     FormsAuthentication.SetAuthCookie(user.userName, user.RememberMe);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Students");
                 }
                 else
                 {
@@ -40,10 +40,5 @@ namespace StudentManagementApp.Controllers
             return View(user);
         }
 
-        public ActionResult Logout()
-        {
-            FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Home");
-        }
     }
 }

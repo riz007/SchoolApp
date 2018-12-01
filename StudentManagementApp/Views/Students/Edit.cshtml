@@ -2,16 +2,15 @@
 
 @{
     ViewBag.Title = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
 
 <h2>Edit</h2>
 
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Student</h4>
         <hr />
@@ -53,7 +52,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.dateOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.dateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.dateOfBirth, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.dateOfBirth, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -69,7 +68,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.dateOfJoin, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.dateOfJoin, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.dateOfJoin, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.dateOfJoin, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -96,4 +95,26 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        //$(function () {
+        //    $('.datepicker').datepicker();
+        //});
+        $(function () {
+            $.validator.addMethod('date',
+                function (value, element) {
+                    if (this.optional(element)) {
+                        return true;
+                    }
+                    var valid = true;
+                    try {
+                        $.datepicker.parseDate('dd/mm/yy', value);
+                    }
+                    catch (err) {
+                        valid = false;
+                    }
+                    return valid;
+                });
+            $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+    </script>
 }

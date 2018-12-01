@@ -1,0 +1,64 @@
+﻿@model IEnumerable<StudentManagementApp.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Exam Schedule</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.examType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.examDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.examFullScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.examScorePercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.courseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Section.sectionID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.examType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examFullScore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examScorePercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.courseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Section.sectionID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.examID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.examID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.examID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -82,7 +82,7 @@ namespace StudentManagementApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "studentID,firstName,lastName,email,password,dateOfBirth,phone,dateOfJoin,addressID,street")] Student student)
+        public ActionResult Edit([Bind(Include = "studentID,firstName,lastName,email,password,dateOfBirth,phone,dateOfJoin,addressID")] Student student)
         {
             if (ModelState.IsValid)
             {

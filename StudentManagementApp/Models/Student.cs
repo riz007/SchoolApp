@@ -14,6 +14,12 @@ namespace StudentManagementApp.Models
     
     public partial class Student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Student()
+        {
+            this.Attendances = new HashSet<Attendance>();
+        }
+    
         public int studentID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
@@ -23,14 +29,9 @@ namespace StudentManagementApp.Models
         public int phone { get; set; }
         public System.DateTime dateOfJoin { get; set; }
         public int addressID { get; set; }
-        public string street { get; set; }
-        public string city { get; set; }
-        public string line1 { get; set; }
-        public string line2 { get; set; }
-        public string province { get; set; }
-        public string zipCode { get; set; }
-        public string country { get; set; }
     
         public virtual Address Address { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Attendance> Attendances { get; set; }
     }
 }

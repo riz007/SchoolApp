@@ -16,5 +16,8 @@ namespace StudentManagementApp.Models
     {
         public int attendanceID { get; set; }
         public System.DateTime attenDate { get; set; }
+        public Nullable<int> studentID { get; set; }
+    
+        public virtual Student Student { get; set; }
     }
 }
